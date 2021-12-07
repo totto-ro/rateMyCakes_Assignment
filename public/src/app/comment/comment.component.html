@@ -1,0 +1,37 @@
+<app-show-item *ngIf='selectedCake' [showItem] = 'cakeById'></app-show-item>
+
+
+<section *ngFor="let element of allCakes">
+        <img (click) = "onShow($event)" [id]="element.id"  class="image" src={{element.image}} alt="cake">
+        <!--<img (click)="getOneCake( element.id)" class="image" src={{element.image}} alt="cake">--> 
+        <form (submit)="createNewComment($event, element.id)" class="newComment">
+            <input type="hidden" value="{{element.id}}" id="id">
+            <ul>
+                <li class="addInput">
+                    <label for="{{element._id}}">
+                        Rate:
+                    </label>
+                    <select class="addInput" (change)="updateStars( $event )"  name="stars" id="stars">
+                        <option>--Select rating--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </li>
+                <li class="addInput">
+                    <label for="{{element._id}}">
+                        Comment:
+                    </label>
+                    <input type="text" id="comment" name="comment" (keyup)="updateComment( $event )" />
+                </li>
+                <li>
+                    <button type="submit" value="Rate">
+                        Rate!            
+                    </button>
+                </li>
+            </ul>
+        </form>
+</section>
+

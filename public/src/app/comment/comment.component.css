@@ -1,0 +1,71 @@
+section{
+    border: 2px solid grey;
+    padding: 20px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+li > h1{
+    font-size: 80px;
+    color: azure;
+    margin-bottom: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+li{
+    margin: 30px;
+    font-size: 30px;
+    list-style: none;
+}
+
+.addInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	padding-left: 50px;
+	padding-right: 50px;
+    width: 400px;
+}
+
+.addInput > input, select{
+    margin-top: 20px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+button{
+    font-size: 25px;
+    padding: 15px;
+    background-color:lightseagreen;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 7px 7px rgb(0, 0, 0);
+    width: 180px;
+	margin-left: 50px;
+	margin-right: 50px;
+    
+}
+
+button:hover{
+    background-color:rgb(0, 217, 255);
+    color: azure;
+    cursor: pointer;
+}
+
+
+
+.error{
+    width: 400px;
+    color: rgb(104, 10, 29);
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 50px;
+	margin-right: 50px;
+}
+
+.image{
+    width: 400px;
+    height: 400px;
+}

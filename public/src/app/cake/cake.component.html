@@ -1,0 +1,26 @@
+
+<form (submit)="createNewCake($event)" class="newCake">
+    <ul>
+        <li><h2>Submit a cake to be rated</h2></li>
+        <div class="error">
+            {{errorMessage}}
+        </div>
+        <li class="addInput">
+            <label for="bakerName">
+                Baker Name:
+            </label>
+            <input type="text" id="bakerName" name="bakerName" [(ngModel)]="newCake.bakerName" />
+        </li>
+        <li class="addInput">
+            <label for="image">
+                Image url:
+            </label>
+            <input type="text" id="image" name="image" [(ngModel)]="newCake.image" />
+        </li>
+        <li>
+            <button type="submit" value="submit">
+                Submit
+            </button>
+        </li>
+    </ul>
+</form>

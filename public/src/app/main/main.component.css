@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 80px;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.commentSection{
+    overflow: auto;
+    height: 840px;
+}

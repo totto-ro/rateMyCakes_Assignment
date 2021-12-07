@@ -1,0 +1,6 @@
+<h1>Rate my Cakes</h1>
+<main>
+    <app-cake></app-cake>
+    <app-comment class="commentSection"></app-comment>
+</main>
+<app-show-item *ngIf='selectedCake' [showItem] = 'cakeById'></app-show-item>

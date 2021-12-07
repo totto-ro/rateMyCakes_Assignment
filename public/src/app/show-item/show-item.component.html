@@ -1,0 +1,39 @@
+<ul class="box2">
+    <li class="innerBox">
+        <div>
+            <h1>Show cake detail:</h1>
+            <h2>Baked by: {{ showItem.bakerName }}</h2>
+            <h3>Cake ID: {{ showItem._id }}</h3>
+            <img class="image" src={{showItem.image}} alt="">
+        </div>
+        <div class="space">
+            <h3>Comments:</h3>
+            <div class="comments" *ngFor="let element of showItem.comments"> 
+               <!--  <h3>Show item: {{showItem | json}}</h3>-->
+                <p > {{ element.comment }} </p>
+                <p > {{ element.stars }} stars </p>
+            </div>
+        </div>
+                
+    </li>
+</ul> 
+
+<!-- <div *ngFor="let cake of allCakes">
+    {{cake.bakerName}}
+    <div *ngFor="let comment of cake.comments">
+      {{comment.comment}} {{comment.stars}}
+    </div>
+  </div>
+  
+  allCakes = [{
+    bakerName: "Baker 1",
+    comments: [{
+      comment: "Comment 1",
+      stars: 5
+    },
+    {
+      comment: "Comment 2",
+      stars: 3
+    }]
+  }] -->
+  
